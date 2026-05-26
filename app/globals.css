@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* BVW Brand Colors — Green to Blue theme */
+  --bvw-green:        #14a84b;
+  --bvw-blue:         #1a5dab;
+  --bvw-dark:         #0e1c2f;
+  --bvw-cream:        #f5f2ec;
+  --bvw-gold:         #c8a84b;
+
+  /* Semantic tokens */
+  --background:             oklch(0.97 0.005 95);    /* warm off-white cream */
+  --foreground:             oklch(0.12 0.02 240);    /* deep dark blue-black */
+  --card:                   oklch(1 0 0);
+  --card-foreground:        oklch(0.12 0.02 240);
+  --popover:                oklch(1 0 0);
+  --popover-foreground:     oklch(0.12 0.02 240);
+  --primary:                oklch(0.42 0.15 145);    /* forest green */
+  --primary-foreground:     oklch(1 0 0);
+  --secondary:              oklch(0.35 0.12 240);    /* deep blue */
+  --secondary-foreground:   oklch(1 0 0);
+  --muted:                  oklch(0.93 0.008 95);
+  --muted-foreground:       oklch(0.48 0.02 240);
+  --accent:                 oklch(0.62 0.13 145);    /* mid green accent */
+  --accent-foreground:      oklch(1 0 0);
+  --destructive:            oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border:                 oklch(0.87 0.01 95);
+  --input:                  oklch(0.87 0.01 95);
+  --ring:                   oklch(0.42 0.15 145);
+  --radius:                 0.5rem;
+
+  /* Custom brand tokens */
+  --brand-green:   #14a84b;
+  --brand-blue:    #1a5dab;
+  --brand-dark:    #0e1c2f;
+  --brand-cream:   #f5f2ec;
+  --brand-gold:    #c8a84b;
+  --section-pad:   6rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', serif;
+  --font-mono: 'Geist Mono', monospace;
+
+  --color-background:           var(--background);
+  --color-foreground:           var(--foreground);
+  --color-card:                 var(--card);
+  --color-card-foreground:      var(--card-foreground);
+  --color-popover:              var(--popover);
+  --color-popover-foreground:   var(--popover-foreground);
+  --color-primary:              var(--primary);
+  --color-primary-foreground:   var(--primary-foreground);
+  --color-secondary:            var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:                var(--muted);
+  --color-muted-foreground:     var(--muted-foreground);
+  --color-accent:               var(--accent);
+  --color-accent-foreground:    var(--accent-foreground);
+  --color-destructive:          var(--destructive);
+  --color-border:               var(--border);
+  --color-input:                var(--input);
+  --color-ring:                 var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Marquee animation for industry logos */
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
