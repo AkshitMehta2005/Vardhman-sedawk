@@ -4,6 +4,7 @@ import HeroSection from '@/components/hero-section'
 import AboutSection from '@/components/about-section'
 import WhyChooseSection from '@/components/why-choose-section'
 import ProductsSection from '@/components/products-section'
+import GallerySection from '@/components/gallery-section'
 import IndustriesSection from '@/components/industries-section'
 import MissionVisionSection from '@/components/mission-vision-section'
 import ClientsSection from '@/components/clients-section'
@@ -21,6 +22,7 @@ export default function HomePage() {
         <AboutSection />
         <WhyChooseSection />
         <ProductsSection />
+        <GallerySection />
         <IndustriesSection />
         <MissionVisionSection />
         <ClientsSection />
