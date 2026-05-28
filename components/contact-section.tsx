@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[#f5f2ec]">
+    <section id="contact" className="py-24 md:py-32 bg-[#f5f2ec] dark:bg-[#0a1322]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -36,7 +36,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="bg-white rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
+            <div className="bg-card rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#14a84b]/10 flex items-center justify-center shrink-0">
                 <MapPin size={20} className="text-[#14a84b]" />
               </div>
@@ -48,7 +48,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
+            <div className="bg-card rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#14a84b]/10 flex items-center justify-center shrink-0">
                 <Phone size={20} className="text-[#14a84b]" />
               </div>
@@ -60,14 +60,14 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
+            <div className="bg-card rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#14a84b]/10 flex items-center justify-center shrink-0">
                 <Mail size={20} className="text-[#14a84b]" />
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">Email</p>
-                <a href="mailto:contact@bvwindia.com" className="text-muted-foreground text-sm hover:text-[#14a84b] transition-colors block">
-                  contact@bvwindia.com
+                <a href="mailto:info@zypher-code.com" className="text-muted-foreground text-sm hover:text-[#14a84b] transition-colors block">
+                  info@zypher-code.com
                 </a>
                 <a href="mailto:sales@bvwindia.com" className="text-muted-foreground text-sm hover:text-[#14a84b] transition-colors block">
                   sales@bvwindia.com
@@ -75,7 +75,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
+            <div className="bg-card rounded-2xl p-6 flex items-start gap-4 border border-border hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#14a84b]/10 flex items-center justify-center shrink-0">
                 <Clock size={20} className="text-[#14a84b]" />
               </div>
@@ -88,7 +88,7 @@ export default function ContactSection() {
 
           {/* Contact form */}
           <motion.div
-            className="bg-white rounded-2xl p-8 border border-border shadow-sm"
+            className="bg-card rounded-2xl p-8 border border-border shadow-sm"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -103,7 +103,7 @@ export default function ContactSection() {
                     id="fname"
                     type="text"
                     placeholder="Your name"
-                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] transition-all"
+                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -112,7 +112,7 @@ export default function ContactSection() {
                     id="phone"
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] transition-all"
+                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
                   />
                 </div>
               </div>
@@ -122,14 +122,14 @@ export default function ContactSection() {
                   id="email"
                   type="email"
                   placeholder="your@email.com"
-                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] transition-all"
+                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
                 />
               </div>
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="product" className="text-sm font-medium text-foreground">Product of Interest</label>
                 <select
                   id="product"
-                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] text-foreground transition-all"
+                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
                 >
                   <option value="">Select a product...</option>
                   <option>WPC Doors</option>
@@ -148,7 +148,7 @@ export default function ContactSection() {
                   id="message"
                   rows={4}
                   placeholder="Tell us about your project requirements..."
-                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] resize-none transition-all"
+                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground resize-none transition-all"
                 />
               </div>
               <button

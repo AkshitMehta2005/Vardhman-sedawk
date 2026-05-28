@@ -64,7 +64,7 @@ export default function ClientsSection() {
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
-              className="group flex flex-col items-center justify-center gap-3 bg-[#f5f2ec] rounded-2xl py-8 px-4 border border-transparent hover:border-[#14a84b]/30 hover:bg-white hover:shadow-md transition-all duration-300"
+              className="group flex flex-col items-center justify-center gap-3 bg-[#f5f2ec] dark:bg-[#0f1d31] rounded-2xl py-8 px-4 border border-transparent dark:border-white/5 hover:border-[#14a84b]/30 hover:bg-white dark:hover:bg-white/5 hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function ClientsSection() {
             {testimonials.map((t, i) => (
               <motion.div
                 key={t.author}
-                className="bg-[#f5f2ec] rounded-2xl p-6 border border-border relative"
+                className="bg-[#f5f2ec] dark:bg-[#0f1d31] rounded-2xl p-6 border border-border relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

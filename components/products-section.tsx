@@ -129,7 +129,7 @@ export default function ProductsSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
               >
-                <div className="group bg-white rounded-2xl overflow-hidden border border-border hover:shadow-2xl transition-all duration-400 hover:-translate-y-1 h-full flex flex-col">
+                <div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-2xl dark:hover:shadow-black/40 transition-all duration-400 hover:-translate-y-1 h-full flex flex-col">
                   {/* Image */}
                   <div className="relative overflow-hidden aspect-[4/3]">
                     <Image

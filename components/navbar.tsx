@@ -3,8 +3,37 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Phone, Mail } from 'lucide-react'
+import { Menu, X, Phone, Mail, Sun, Moon } from 'lucide-react'
+
+function ThemeToggle({ className = '' }: { className?: string }) {
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
+  const isDark = resolvedTheme === 'dark'
+
+  return (
+    <button
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      aria-label="Toggle dark mode"
+      className={`relative flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground/70 transition-colors hover:text-[#14a84b] ${className}`}
+    >
+      {/* Render icon only after mount so server/client markup matches */}
+      {mounted && (
+        <motion.span
+          key={isDark ? 'moon' : 'sun'}
+          initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
+          animate={{ rotate: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 0.25 }}
+        >
+          {isDark ? <Moon size={17} /> : <Sun size={17} />}
+        </motion.span>
+      )}
+    </button>
+  )
+}
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -37,9 +66,9 @@ export default function Navbar() {
               <Phone size={12} />
               9896115358
             </a>
-            <a href="mailto:contact@bvwindia.com" className="flex items-center gap-1.5 hover:text-[#14a84b] transition-colors">
+            <a href="mailto:info@zypher-code.com" className="flex items-center gap-1.5 hover:text-[#14a84b] transition-colors">
               <Mail size={12} />
-              contact@bvwindia.com
+              info@zypher-code.com
             </a>
           </div>
         </div>
@@ -49,8 +78,8 @@ export default function Navbar() {
       <motion.header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md'
-            : 'bg-white/98'
+            ? 'bg-white/95 dark:bg-[#0a1322]/90 backdrop-blur-md shadow-md dark:shadow-black/40 dark:border-b dark:border-white/5'
+            : 'bg-white/98 dark:bg-[#0a1322]/95'
         }`}
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -81,23 +110,28 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA */}
-          <a
-            href="tel:9896115358"
-            className="hidden lg:flex items-center gap-2 bg-[#14a84b] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#0f8a3c] transition-colors"
-          >
-            <Phone size={14} />
-            Get a Quote
-          </a>
+          {/* Right controls */}
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden p-2 rounded-lg text-foreground"
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* CTA */}
+            <a
+              href="tel:9896115358"
+              className="hidden lg:flex items-center gap-2 bg-[#14a84b] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#0f8a3c] transition-colors"
+            >
+              <Phone size={14} />
+              Get a Quote
+            </a>
+
+            {/* Mobile menu toggle */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="lg:hidden p-2 rounded-lg text-foreground"
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </motion.header>
 
@@ -129,7 +163,7 @@ export default function Navbar() {
             ))}
             <div className="mt-8 flex flex-col gap-3 text-white/60 text-sm">
               <a href="tel:9896115358" className="flex items-center gap-2"><Phone size={14} />9896115358</a>
-              <a href="mailto:contact@bvwindia.com" className="flex items-center gap-2"><Mail size={14} />contact@bvwindia.com</a>
+              <a href="mailto:info@zypher-code.com" className="flex items-center gap-2"><Mail size={14} />info@zypher-code.com</a>
             </div>
           </motion.div>
         )}

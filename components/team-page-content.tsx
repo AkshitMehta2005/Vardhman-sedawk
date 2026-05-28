@@ -27,7 +27,7 @@ const teamMembers = [
     designation: 'Key Account Manager',
     role: 'Managing key client relationships, project coordination, and ensuring seamless delivery and customer satisfaction across major accounts.',
     phone: '9896115358',
-    email: 'contact@bvwindia.com',
+    email: 'info@zypher-code.com',
     image: '/images/team-kam.jpg',
   },
   {
@@ -164,14 +164,14 @@ export default function TeamPageContent() {
             {teamMembers.filter((m) => !m.highlight).map((member, i) => (
               <motion.div
                 key={member.name}
-                className="group bg-white rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 {/* Photo */}
-                <div className="relative aspect-[3/4] overflow-hidden bg-[#f5f2ec]">
+                <div className="relative aspect-[3/4] overflow-hidden bg-[#f5f2ec] dark:bg-[#16233a]">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -213,7 +213,7 @@ export default function TeamPageContent() {
       </section>
 
       {/* Team values */}
-      <section className="py-24 bg-[#f5f2ec]">
+      <section className="py-24 bg-[#f5f2ec] dark:bg-[#0a1322]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             className="text-center mb-12"
@@ -234,7 +234,7 @@ export default function TeamPageContent() {
             {values.map((v, i) => (
               <motion.div
                 key={v.title}
-                className="bg-white rounded-2xl p-6 border border-border hover:shadow-lg transition-all hover:-translate-y-0.5"
+                className="bg-card rounded-2xl p-6 border border-border hover:shadow-lg transition-all hover:-translate-y-0.5"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

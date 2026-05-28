@@ -42,6 +42,30 @@
   --section-pad:   6rem;
 }
 
+.dark {
+  color-scheme: dark;
+
+  --background:             #0a1322;    /* deep brand navy */
+  --foreground:             #e8edf5;    /* soft off-white */
+  --card:                   #0f1d31;    /* raised navy surface */
+  --card-foreground:        #e8edf5;
+  --popover:                #0f1d31;
+  --popover-foreground:     #e8edf5;
+  --primary:                #14a84b;     /* brand green */
+  --primary-foreground:     #ffffff;
+  --secondary:              #1a5dab;     /* brand blue */
+  --secondary-foreground:   #ffffff;
+  --muted:                  #16233a;
+  --muted-foreground:       #9fb0c5;
+  --accent:                 #3ddc84;     /* bright green accent */
+  --accent-foreground:      #06210f;
+  --destructive:            oklch(0.62 0.22 25);
+  --destructive-foreground: #ffffff;
+  --border:                 #1f2f49;
+  --input:                  #1f2f49;
+  --ring:                   #3ddc84;
+}
+
 @theme inline {
   --font-sans: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
   --font-serif: var(--font-cormorant), 'Cormorant Garamond', serif;

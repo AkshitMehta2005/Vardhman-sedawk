@@ -106,7 +106,7 @@ export default function AboutSection() {
 
             <a
               href="/#contact"
-              className="inline-flex items-center gap-2 bg-[#0e1c2f] text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-[#14a84b] transition-colors"
+              className="inline-flex items-center gap-2 bg-[#0e1c2f] dark:bg-[#14a84b] text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-[#14a84b] dark:hover:bg-[#0f8a3c] transition-colors"
             >
               Learn More About Us
             </a>
