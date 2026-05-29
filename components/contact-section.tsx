@@ -112,7 +112,7 @@ export default function ContactSection() {
                     id="fname"
                     type="text"
                     placeholder="Your name"
-                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
+                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground placeholder:text-muted-foreground transition-all"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -121,7 +121,7 @@ export default function ContactSection() {
                     id="phone"
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
+                    className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground placeholder:text-muted-foreground transition-all"
                   />
                 </div>
               </div>
@@ -131,14 +131,14 @@ export default function ContactSection() {
                   id="email"
                   type="email"
                   placeholder="your@email.com"
-                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
+                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground placeholder:text-muted-foreground transition-all"
                 />
               </div>
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="product" className="text-sm font-medium text-foreground">Product of Interest</label>
                 <select
                   id="product"
-                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground transition-all"
+                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground placeholder:text-muted-foreground transition-all"
                 >
                   <option value="">Select a product...</option>
                   <option>WPC Doors</option>
@@ -160,7 +160,7 @@ export default function ContactSection() {
                   id="message"
                   rows={4}
                   placeholder="Tell us about your project requirements..."
-                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground resize-none transition-all"
+                  className="border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#14a84b]/40 bg-[#f5f2ec] dark:bg-[#16233a] text-foreground placeholder:text-muted-foreground resize-none transition-all"
                 />
               </div>
               <button
