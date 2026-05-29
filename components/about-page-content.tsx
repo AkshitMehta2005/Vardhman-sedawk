@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import {
   ShieldCheck,
-  Award,
-  Lightbulb,
-  HeartHandshake,
+  Droplets,
+  Sun,
+  Sparkles,
   Leaf,
-  TrendingUp,
+  Hammer,
 } from 'lucide-react'
 
 const journey = [
@@ -18,13 +18,13 @@ const journey = [
   { year: '2024', text: 'Grew to a pan-India presence with 800+ tonnes of monthly production capacity.' },
 ]
 
-const values = [
-  { icon: ShieldCheck, title: 'Integrity & Honesty', desc: 'Transparent, ethical dealings with every customer and partner.' },
-  { icon: Award, title: 'Quality Excellence', desc: 'Rigorous standards across every profile, panel and pipe we make.' },
-  { icon: Lightbulb, title: 'Innovation', desc: 'Continually advancing our materials, processes and finishes.' },
-  { icon: HeartHandshake, title: 'Customer Commitment', desc: 'Long-term relationships built on trust and dependable supply.' },
-  { icon: Leaf, title: 'Sustainability', desc: 'Eco-friendly products that help save trees and reduce waste.' },
-  { icon: TrendingUp, title: 'Continuous Growth', desc: 'Scaling capacity and reach while raising the bar on value.' },
+const benefits = [
+  { icon: ShieldCheck, title: 'Termite & Borer Proof', desc: 'Never attracts termites, borers or fungus — unlike natural timber.' },
+  { icon: Droplets, title: '100% Waterproof', desc: 'Fully water and moisture resistant; perfect for baths, kitchens and exteriors.' },
+  { icon: Sun, title: 'Weather & UV Resistant', desc: 'Withstands rain, heat and sun without warping, fading or cracking.' },
+  { icon: Sparkles, title: 'Low Maintenance', desc: 'No polishing, painting or sealing — just wipe clean and it lasts for years.' },
+  { icon: Leaf, title: 'Eco-Friendly', desc: 'Recyclable, tree-saving composites that cut waste — Save Green, Live Green.' },
+  { icon: Hammer, title: 'Durable & Long-Lasting', desc: 'High-density material built for strength, stability and a long service life.' },
 ]
 
 export default function AboutPageContent() {
@@ -140,14 +140,14 @@ export default function AboutPageContent() {
           >
             <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#14a84b] dark:text-[#3ddc84]">
               <span className="h-px w-8 bg-current" />
-              What We Stand For
+              Product Quality &amp; Benefits
               <span className="h-px w-8 bg-current" />
             </span>
-            <h2 className="font-serif text-3xl text-foreground md:text-4xl">Our Core Values</h2>
+            <h2 className="font-serif text-3xl text-foreground md:text-4xl">Built to Outperform</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map((v, i) => (
+            {benefits.map((v, i) => (
               <motion.div
                 key={v.title}
                 className="group rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-black/40"
