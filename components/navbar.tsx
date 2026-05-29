@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
     children: [
       { label: 'Our Story', href: '/about' },
       { label: 'Mission & Vision', href: '/about#mission' },
-      { label: 'Our Team', href: '/team' },
+      { label: 'Our Team', href: '/about#team' },
     ],
   },
   {

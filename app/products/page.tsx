@@ -7,7 +7,7 @@ import ProductsPageContent from '@/components/products-page-content'
 export const metadata: Metadata = {
   title: 'Products | BVW — WPC & UPVC Building Solutions',
   description:
-    'Explore BVW’s complete range of WPC doors, frames, decking, cladding, boards, jali, sun-shade facade louvers, profiles, mouldings and energy-efficient UPVC windows.',
+    'Explore BVW’s complete range of WPC doors, frames, decking, cladding, boards, jali, sun-shade facade louvers, profiles, mouldings, plus energy-efficient UPVC windows and UPVC pipes & fittings.',
 }
 
 export default function ProductsPage() {

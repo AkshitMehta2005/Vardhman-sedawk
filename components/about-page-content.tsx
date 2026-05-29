@@ -27,6 +27,14 @@ const benefits = [
   { icon: Hammer, title: 'Durable & Long-Lasting', desc: 'High-density material built for strength, stability and a long service life.' },
 ]
 
+const team = [
+  { name: 'Navneet Jain', role: 'Founder & COO' },
+  { name: 'Nidhi Tandon', role: 'Chief Marketing Officer' },
+  { name: 'Ritu Kashyap', role: 'Key Account Manager' },
+  { name: 'Sumit Dayal', role: 'Accounts Manager' },
+  { name: 'Radha Raman', role: 'Manager — Production' },
+]
+
 export default function AboutPageContent() {
   return (
     <>
@@ -164,6 +172,47 @@ export default function AboutPageContent() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-foreground">{v.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our team (brief) */}
+      <section id="team" className="scroll-mt-24 bg-[#f5f2ec] py-20 dark:bg-[#0a1322] md:py-28">
+        <div className="mx-auto max-w-5xl px-6">
+          <motion.div
+            className="mb-12 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#14a84b] dark:text-[#3ddc84]">
+              <span className="h-px w-8 bg-current" />
+              Our People
+              <span className="h-px w-8 bg-current" />
+            </span>
+            <h2 className="mb-4 font-serif text-3xl text-foreground md:text-4xl">The Team Behind BVW</h2>
+            <p className="mx-auto max-w-2xl leading-relaxed text-muted-foreground">
+              BVW is powered by a close-knit team of professionals led by founder Navneet Jain. From advanced
+              manufacturing and quality control to marketing, key accounts and customer support, every member
+              shares one commitment — delivering durable, sustainable solutions and dependable service.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {team.map((m, i) => (
+              <motion.div
+                key={m.name}
+                className="rounded-xl border border-border bg-card px-4 py-5 text-center"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+              >
+                <p className="text-sm font-semibold text-foreground">{m.name}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{m.role}</p>
               </motion.div>
             ))}
           </div>

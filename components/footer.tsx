@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Instagram, Navigation } from 'lucide-react'
 
 const products = [
   'WPC Doors', 'WPC Frames', 'WPC Decking', 'WPC Cladding', 'WPC Boards',
-  'WPC Jali', 'WPC Sun Shade Facade Louvers', 'WPC Profiles', 'WPC Mouldings', 'UPVC Windows',
+  'WPC Jali', 'WPC Sun Shade Facade Louvers', 'WPC Profiles', 'WPC Mouldings', 'UPVC Windows', 'UPVC Pipes & Fittings',
 ]
 
 const quickLinks = [
@@ -14,7 +14,7 @@ const quickLinks = [
   { label: 'Industries', href: '/industries' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Clients', href: '/clients' },
-  { label: 'Our Team', href: '/team' },
+  { label: 'Our Team', href: '/about#team' },
   { label: 'Contact', href: '/contact' },
 ]
 

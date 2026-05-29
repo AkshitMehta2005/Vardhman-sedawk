@@ -79,6 +79,13 @@ const products = [
     image: '/images/product-upvc-window.jpg',
     tag: 'Featured',
   },
+  {
+    id: 11,
+    name: 'UPVC Pipes & Fittings',
+    desc: 'Corrosion-free UPVC pipes & fittings for leak-proof water supply, drainage and irrigation.',
+    image: '/images/product-upvc-pipes.jpg',
+    tag: 'Reliable',
+  },
 ]
 
 export default function ProductsSection() {

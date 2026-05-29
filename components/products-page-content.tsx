@@ -147,6 +147,19 @@ const upvcProducts: Product[] = [
     ],
     applications: 'Residential homes, apartments, villas, offices, hotels and commercial buildings.',
   },
+  {
+    name: 'UPVC Pipes & Fittings',
+    desc: 'High-quality UPVC pipes and fittings engineered for reliable, leak-free fluid handling. A smooth interior bore keeps flow efficient while the corrosion-free material guarantees decades of dependable service.',
+    image: '/images/product-upvc-pipes.jpg',
+    features: [
+      'Corrosion-free and chemical resistant',
+      'Leak-proof, precision-engineered joints',
+      'Smooth interior bore for unrestricted flow',
+      'Lightweight and quick to install',
+      'Long service life with minimal maintenance',
+    ],
+    applications: 'Plumbing, water supply, drainage, irrigation and industrial fluid systems.',
+  },
 ]
 
 function ProductCard({ product, i }: { product: Product; i: number }) {
@@ -285,7 +298,7 @@ export default function ProductsPageContent() {
             </p>
           </motion.div>
 
-          <div className="grid max-w-md grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {upvcProducts.map((product, i) => (
               <ProductCard key={product.name} product={product} i={i} />
             ))}

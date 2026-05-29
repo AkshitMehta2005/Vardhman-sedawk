@@ -151,6 +151,7 @@ export default function ContactSection() {
                   <option>WPC Profiles</option>
                   <option>WPC Mouldings</option>
                   <option>UPVC Windows</option>
+                  <option>UPVC Pipes & Fittings</option>
                   <option>Custom Solution</option>
                 </select>
               </div>

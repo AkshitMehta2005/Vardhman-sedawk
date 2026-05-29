@@ -169,7 +169,7 @@ export default function DoorAnimation() {
   }
 
   const sceneScale = !reduced && pushing ? 1.5 : reduced || entered ? 1 : 0.985
-  const doorRotateY = reduced ? -72 : opened ? -104 : 0
+  const doorRotateY = reduced ? 72 : opened ? 104 : 0
   const interiorOpacity = reduced ? 0.9 : opened ? 0.9 : 0
   const textOpacity = reduced ? 1 : textOut ? 0 : entered ? 1 : 0
   const washOpacity = reduced ? 0 : washing ? 0.85 : pushing ? 0.22 : 0
@@ -294,7 +294,7 @@ export default function DoorAnimation() {
               <div className="absolute inset-x-[18px] top-[18px] bottom-0 z-10" style={{ perspective: '1600px' }}>
                 <motion.div
                   className="relative h-full w-full"
-                  style={{ transformOrigin: 'left center', transformStyle: 'preserve-3d', willChange: 'transform' }}
+                  style={{ transformOrigin: 'right center', transformStyle: 'preserve-3d', willChange: 'transform' }}
                   initial={reduced ? false : { rotateY: 0 }}
                   animate={{ rotateY: doorRotateY }}
                   transition={reduced ? { duration: 0 } : { duration: 1.5, ease: [0.65, 0, 0.2, 1] }}
@@ -385,7 +385,7 @@ export default function DoorAnimation() {
                     {/* Brass handle (procedural only; a real door photo has its own) */}
                     {!doorPhoto && (
                       <motion.div
-                        className="absolute right-[9px] top-1/2 h-16 -translate-y-1/2 md:h-20"
+                        className="absolute left-[9px] top-1/2 h-16 -translate-y-1/2 md:h-20"
                         style={{ width: 8 }}
                         initial={reduced ? false : { rotate: 0 }}
                         animate={{ rotate: !reduced && clicked && !opened ? -2 : 0 }}
@@ -427,17 +427,17 @@ export default function DoorAnimation() {
               />
               {/* right-jamb rebate — lit reveal opening up */}
               <motion.div
-                className="absolute right-[18px] top-[18px] bottom-0 z-[15] w-[6px] origin-right"
-                style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0.5), rgba(255,224,170,0.45))' }}
+                className="absolute left-[18px] top-[18px] bottom-0 z-[15] w-[6px] origin-left"
+                style={{ background: 'linear-gradient(270deg, rgba(0,0,0,0.5), rgba(255,224,170,0.45))' }}
                 initial={reduced ? false : { opacity: 0, scaleX: 0.2 }}
                 animate={{ opacity: lit ? 1 : 0, scaleX: lit ? 1 : 0.2 }}
                 transition={reduced ? { duration: 0 } : { duration: 1.2, delay: 0.45 }}
               />
               {/* hinges */}
-              <svg className="absolute left-[12px] top-[24%] z-30" width="8" height="36" style={{ filter: 'url(#steelHinge)', ...matStyle }}>
+              <svg className="absolute right-[12px] top-[24%] z-30" width="8" height="36" style={{ filter: 'url(#steelHinge)', ...matStyle }}>
                 <rect width="8" height="36" rx="1.5" fill="#8a8a8a" />
               </svg>
-              <svg className="absolute left-[12px] bottom-[24%] z-30" width="8" height="36" style={{ filter: 'url(#steelHinge)', ...matStyle }}>
+              <svg className="absolute right-[12px] bottom-[24%] z-30" width="8" height="36" style={{ filter: 'url(#steelHinge)', ...matStyle }}>
                 <rect width="8" height="36" rx="1.5" fill="#8a8a8a" />
               </svg>
 
