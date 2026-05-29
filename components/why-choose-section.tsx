@@ -21,15 +21,15 @@ const features = [
   },
   {
     icon: LinkIcon,
-    title: 'Durable & Strong',
+    title: 'Durable & Sustainable',
   },
   {
     icon: Shield,
-    title: 'Termite & Weather Resistant',
+    title: '100% Water & Termite Proof',
   },
   {
     icon: Wrench,
-    title: 'Low Maintenance',
+    title: 'Zero Maintenance',
   },
   {
     icon: Zap,
@@ -54,13 +54,13 @@ export default function WhyChooseSection() {
         >
           {/* Small Label */}
           <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="h-px w-8 bg-[#14a84b]" />
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
 
-            <span className="text-[#14a84b] uppercase tracking-[0.3em] text-xs font-semibold">
+            <span className="text-[#14a84b] dark:text-[#3ddc84] uppercase tracking-[0.3em] text-xs font-semibold">
               Why Choose Us
             </span>
 
-            <span className="h-px w-8 bg-[#14a84b]" />
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
           </div>
 
           {/* Main Heading */}

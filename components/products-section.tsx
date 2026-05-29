@@ -1,68 +1,83 @@
 'use client'
 
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 
 const products = [
   {
     id: 1,
     name: 'WPC Doors',
-    desc: 'Premium quality WPC doors designed for durability, termite resistance, water resistance, and long-lasting performance.',
+    desc: 'Premium WPC doors built for durability, termite & water resistance, and long-lasting performance.',
     image: '/images/product-wpc-door.jpg',
     tag: 'Bestseller',
   },
   {
     id: 2,
-    name: 'WPC Cladding',
-    desc: 'Stylish and weather-resistant WPC cladding solutions that enhance exterior aesthetics while ensuring long-term durability.',
-    image: '/images/product-wpc-cladding.jpg',
+    name: 'WPC Frames',
+    desc: 'Rot-free WPC door & window frames that never warp, crack or absorb moisture.',
+    image: '/images/product-wpc-door.jpg',
     tag: 'Popular',
   },
   {
     id: 3,
-    name: 'WPC Flooring',
-    desc: 'Elegant and durable flooring solutions designed for modern spaces with low maintenance and high resistance.',
-    image: '/images/product-wpc-flooring.jpg',
-    tag: 'New',
-  },
-  {
-    id: 4,
     name: 'WPC Decking',
-    desc: 'Premium outdoor decking solutions ideal for terraces, gardens, pool areas with anti-slip and weather-resistant properties.',
+    desc: 'Anti-slip, weather-resistant decking ideal for terraces, poolsides, gardens and rooftops.',
     image: '/images/product-wpc-decking.jpg',
     tag: 'Premium',
   },
   {
+    id: 4,
+    name: 'WPC Cladding',
+    desc: 'Weatherproof WPC cladding that gives facades the warmth of natural wood, maintenance-free.',
+    image: '/images/product-wpc-cladding.jpg',
+    tag: 'Popular',
+  },
+  {
     id: 5,
-    name: 'UPVC Windows',
-    desc: 'Energy-efficient UPVC windows providing excellent insulation, noise reduction, and modern aesthetics.',
-    image: '/images/product-upvc-window.jpg',
-    tag: 'Featured',
+    name: 'WPC Boards',
+    desc: 'High-density, waterproof WPC boards — a durable substitute for plywood and MDF.',
+    image: '/images/product-wpc-boards.jpg',
+    tag: 'Versatile',
   },
   {
     id: 6,
-    name: 'Interior Flute Panels',
-    desc: 'Modern decorative wall panels to enhance interior spaces with stylish textures, premium finish, and easy installation.',
+    name: 'WPC Jali',
+    desc: 'Decorative WPC jali screens that add privacy and ventilation with zero upkeep.',
     image: '/images/product-flute-panel.jpg',
     tag: 'Trending',
   },
   {
     id: 7,
-    name: 'UPVC Pipes & Fittings',
-    desc: 'High-quality UPVC pipes and fittings engineered for reliable water flow, durability, and corrosion resistance.',
-    image: '/images/product-upvc-pipes.jpg',
-    tag: 'Reliable',
+    name: 'WPC Sun Shade Facade Louvers',
+    desc: 'Architectural WPC louvers that shade facades, cut heat and glare, and add striking linear character.',
+    image: '/images/product-wpc-cladding.jpg',
+    tag: 'New',
   },
   {
     id: 8,
-    name: 'WPC Boards',
-    desc: 'High-performance WPC boards suitable for furniture, partitions, cabinets, and multiple interior applications.',
-    image: '/images/product-wpc-boards.jpg',
-    tag: 'Versatile',
+    name: 'WPC Profiles',
+    desc: 'Versatile WPC profiles and sections — a waterproof, termite-proof alternative to timber battens.',
+    image: '/images/product-wpc-flooring.jpg',
+    tag: 'Reliable',
+  },
+  {
+    id: 9,
+    name: 'WPC Mouldings',
+    desc: 'Decorative WPC mouldings and trims with the finish of carved wood, without the warping.',
+    image: '/images/product-flute-panel.jpg',
+    tag: 'Premium',
+  },
+  {
+    id: 10,
+    name: 'UPVC Windows',
+    desc: 'Energy-efficient UPVC windows offering insulation, noise reduction and modern aesthetics.',
+    image: '/images/product-upvc-window.jpg',
+    tag: 'Featured',
   },
 ]
 
@@ -90,10 +105,10 @@ export default function ProductsSection() {
           transition={{ duration: 0.7 }}
         >
           <div>
-            <span className="inline-flex items-center gap-3 text-[#14a84b] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
-              <span className="h-px w-8 bg-[#14a84b]" />
+            <span className="inline-flex items-center gap-3 text-[#14a84b] dark:text-[#3ddc84] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
+              <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
               Our Products
-              <span className="h-px w-8 bg-[#14a84b]" />
+              <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">
               Engineered for Excellence
@@ -151,10 +166,13 @@ export default function ProductsSection() {
                   <div className="p-5 flex flex-col flex-1">
                     <h3 className="font-semibold text-foreground text-base mb-2">{product.name}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{product.desc}</p>
-                    <button className="flex items-center gap-1.5 text-[#14a84b] text-sm font-semibold hover:gap-2.5 transition-all group/btn">
+                    <Link
+                      href={product.name === 'UPVC Windows' ? '/products#upvc' : '/products#wpc'}
+                      className="flex items-center gap-1.5 text-[#14a84b] dark:text-[#3ddc84] text-sm font-semibold hover:gap-2.5 transition-all group/btn"
+                    >
                       Learn More
                       <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-0.5" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -162,9 +180,15 @@ export default function ProductsSection() {
           </div>
         </div>
 
-        {/* Dots hint */}
-        <div className="flex justify-center mt-8">
-          <p className="text-muted-foreground text-sm">Auto-advances every 4 seconds &middot; Swipe or use arrows to navigate</p>
+        {/* View all */}
+        <div className="flex justify-center mt-10">
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 bg-[#0e1c2f] dark:bg-[#14a84b] text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-[#14a84b] dark:hover:bg-[#0f8a3c] transition-colors group"
+          >
+            View All Products
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+          </Link>
         </div>
       </div>
     </section>

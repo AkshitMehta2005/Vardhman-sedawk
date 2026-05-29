@@ -1,19 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Instagram } from 'lucide-react'
+import { Phone, Mail, MapPin, Instagram, Navigation } from 'lucide-react'
 
 const products = [
-  'WPC Doors', 'WPC Door Frames', 'WPC Jali', 'WPC Boards',
-  'WPC Cladding', 'WPC Flooring', 'WPC Decking', 'UPVC Windows',
+  'WPC Doors', 'WPC Frames', 'WPC Decking', 'WPC Cladding', 'WPC Boards',
+  'WPC Jali', 'WPC Sun Shade Facade Louvers', 'WPC Profiles', 'WPC Mouldings', 'UPVC Windows',
 ]
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/#about' },
-  { label: 'Products', href: '/#products' },
-  { label: 'Industries', href: '/#industries' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Products', href: '/products' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Clients', href: '/clients' },
   { label: 'Our Team', href: '/team' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Footer() {
@@ -75,10 +77,10 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {products.map((p) => (
                 <li key={p}>
-                  <span className="text-white/70 text-sm flex items-center gap-2">
+                  <Link href="/products" className="text-white/70 text-sm flex items-center gap-2 hover:text-[#14a84b] transition-colors">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1a5dab] inline-block" />
                     {p}
-                  </span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,9 +92,20 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#14a84b] mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm leading-relaxed">
-                  Plot no 109-110, Sector 3, HSIIDC,<br />Karnal - 132001, Haryana
-                </span>
+                <div>
+                  <span className="text-white/70 text-sm leading-relaxed">
+                    Plot no 109-110, Sector 3, HSIIDC,<br />Karnal - 132001, Haryana
+                  </span>
+                  <a
+                    href="https://maps.app.goo.gl/Z3hXDENSDSmmtbSS7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center gap-1.5 text-[#14a84b] text-xs font-semibold hover:gap-2.5 transition-all"
+                  >
+                    <Navigation size={13} />
+                    Get Directions
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-[#14a84b] shrink-0" />

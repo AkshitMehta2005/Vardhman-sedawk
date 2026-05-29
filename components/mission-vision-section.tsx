@@ -5,7 +5,7 @@ import { Target, Eye } from 'lucide-react'
 
 export default function MissionVisionSection() {
   return (
-    <section className="py-24 md:py-32 bg-[#0e1c2f] overflow-hidden">
+    <section id="mission" className="scroll-mt-24 py-24 md:py-32 bg-[#0e1c2f] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"

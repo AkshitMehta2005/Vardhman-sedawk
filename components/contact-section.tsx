@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Navigation } from 'lucide-react'
 
 export default function ContactSection() {
   return (
@@ -14,10 +14,10 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-flex items-center gap-3 text-[#14a84b] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
-            <span className="h-px w-8 bg-[#14a84b]" />
+          <span className="inline-flex items-center gap-3 text-[#14a84b] dark:text-[#3ddc84] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
             Contact Us
-            <span className="h-px w-8 bg-[#14a84b]" />
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance mb-4">
             Let&apos;s Start a Conversation
@@ -45,6 +45,15 @@ export default function ContactSection() {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Plot no 109-110, Sector 3, HSIIDC,<br />Karnal - 132001, Haryana, India
                 </p>
+                <a
+                  href="https://maps.app.goo.gl/Z3hXDENSDSmmtbSS7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-[#14a84b] dark:text-[#3ddc84] text-sm font-semibold hover:gap-2.5 transition-all"
+                >
+                  <Navigation size={14} />
+                  Get Directions
+                </a>
               </div>
             </div>
 
@@ -133,12 +142,15 @@ export default function ContactSection() {
                 >
                   <option value="">Select a product...</option>
                   <option>WPC Doors</option>
-                  <option>WPC Cladding</option>
-                  <option>WPC Flooring</option>
+                  <option>WPC Frames</option>
                   <option>WPC Decking</option>
+                  <option>WPC Cladding</option>
+                  <option>WPC Boards</option>
+                  <option>WPC Jali</option>
+                  <option>WPC Sun Shade Facade Louvers</option>
+                  <option>WPC Profiles</option>
+                  <option>WPC Mouldings</option>
                   <option>UPVC Windows</option>
-                  <option>Interior Flute Panels</option>
-                  <option>UPVC Pipes & Fittings</option>
                   <option>Custom Solution</option>
                 </select>
               </div>

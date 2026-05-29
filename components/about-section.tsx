@@ -2,22 +2,12 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { CheckCircle2 } from 'lucide-react'
 
 const milestones = [
   { year: '2010', text: 'Founded by Navneet Jain in Karnal, Haryana' },
   { year: '2015', text: 'Expanded WPC product line with advanced manufacturing' },
   { year: '2019', text: 'Launched UPVC pipes & fittings division under BVW' },
   { year: '2024', text: 'Pan India presence with 800+ ton monthly capacity' },
-]
-
-const values = [
-  'Integrity & Honesty',
-  'Quality Excellence',
-  'Innovation',
-  'Customer Commitment',
-  'Sustainability',
-  'Continuous Growth',
 ]
 
 export default function AboutSection() {
@@ -33,10 +23,10 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-flex items-center gap-3 text-[#14a84b] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
-            <span className="h-px w-8 bg-[#14a84b]" />
+          <span className="inline-flex items-center gap-3 text-[#14a84b] dark:text-[#3ddc84] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
             About Us
-            <span className="h-px w-8 bg-[#14a84b]" />
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">
             Where Innovation Meets Durability
@@ -94,18 +84,8 @@ export default function AboutSection() {
               aesthetics, and long-lasting performance.
             </p>
 
-            {/* Values grid */}
-            <div className="grid grid-cols-2 gap-3 mb-8">
-              {values.map((v) => (
-                <div key={v} className="flex items-center gap-2">
-                  <CheckCircle2 size={15} className="text-[#14a84b] shrink-0" />
-                  <span className="text-sm font-medium text-foreground/80">{v}</span>
-                </div>
-              ))}
-            </div>
-
             <a
-              href="/#contact"
+              href="/about"
               className="inline-flex items-center gap-2 bg-[#0e1c2f] dark:bg-[#14a84b] text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-[#14a84b] dark:hover:bg-[#0f8a3c] transition-colors"
             >
               Learn More About Us

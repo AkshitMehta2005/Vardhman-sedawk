@@ -45,10 +45,10 @@ export default function ClientsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-flex items-center gap-3 text-[#14a84b] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
-            <span className="h-px w-8 bg-[#14a84b]" />
+          <span className="inline-flex items-center gap-3 text-[#14a84b] dark:text-[#3ddc84] text-xs tracking-[0.3em] font-semibold uppercase mb-4">
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
             Our Esteemed Clients
-            <span className="h-px w-8 bg-[#14a84b]" />
+            <span className="h-px w-8 bg-[#14a84b] dark:bg-[#3ddc84]" />
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance mb-4">
             Trusted by Industry Leaders

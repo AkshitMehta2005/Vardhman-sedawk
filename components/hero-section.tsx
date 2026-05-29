@@ -72,14 +72,14 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 3.15 }}
           >
             <Link
-              href="/#products"
+              href="/products"
               className="flex items-center gap-2 bg-[#14a84b] text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-[#0f8a3c] transition-all hover:gap-3 group"
             >
               Explore Products
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               className="flex items-center gap-2 border border-white/30 text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-white/10 transition-all"
             >
               Get a Quote

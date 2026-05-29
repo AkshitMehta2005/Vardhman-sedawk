@@ -18,9 +18,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: 'BVW | Vardhman Composites India — Save Green, Live Green',
   description:
-    'Vardhman Composites India manufactures premium WPC profiles, UPVC pipes & fittings under the BVW brand. Trusted by architects, builders, and contractors across India.',
+    'Vardhman Composites India manufactures premium WPC building solutions and energy-efficient UPVC windows under the BVW brand. Trusted by architects, builders, and contractors across India.',
   keywords:
-    'WPC door, WPC flooring, WPC cladding, UPVC pipes, composite profiles, BVW, Vardhman Composites',
+    'WPC door, WPC frames, WPC cladding, WPC decking, WPC boards, WPC jali, WPC profiles, UPVC windows, composite profiles, BVW, Vardhman Composites',
   openGraph: {
     title: 'BVW | Vardhman Composites India',
     description:
