@@ -168,8 +168,9 @@ export default function DoorAnimation() {
     document.body.style.overflow = ''
   }
 
-  const sceneScale = !reduced && pushing ? 1.5 : reduced || entered ? 1 : 0.985
-  const doorRotateY = reduced ? 72 : opened ? 104 : 0
+  const sceneScale = !reduced && pushing ? 1.62 : reduced || entered ? 1 : 0.985
+  // Negative rotateY around the right hinge swings the door INWARD (into the scene).
+  const doorRotateY = reduced ? -72 : opened ? -104 : 0
   const interiorOpacity = reduced ? 0.9 : opened ? 0.9 : 0
   const textOpacity = reduced ? 1 : textOut ? 0 : entered ? 1 : 0
   const washOpacity = reduced ? 0 : washing ? 0.85 : pushing ? 0.22 : 0
@@ -242,7 +243,7 @@ export default function DoorAnimation() {
             className="relative"
             style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
             initial={reduced ? false : { scale: 0.985, rotateX: 1.5 }}
-            animate={{ scale: sceneScale, rotateX: reduced || entered ? 0 : 1.5, y: pushing ? -18 : 0, x: pushing ? 12 : 0 }}
+            animate={{ scale: sceneScale, rotateX: reduced || entered ? 0 : 1.5, y: pushing ? -22 : 0, x: pushing ? -12 : 0 }}
             transition={
               reduced
                 ? { duration: 0 }
@@ -260,7 +261,7 @@ export default function DoorAnimation() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      'radial-gradient(circle at 52% 60%, #fff7e6 0%, #ffe4b0 24%, rgba(150,160,70,0.18) 56%, transparent 82%)',
+                      'radial-gradient(circle at 38% 56%, #fff7e6 0%, #ffe4b0 28%, rgba(150,160,70,0.22) 60%, transparent 86%)',
                     filter: 'url(#bloom)',
                   }}
                   initial={reduced ? false : { opacity: 0 }}
@@ -269,24 +270,24 @@ export default function DoorAnimation() {
                 />
                 {/* single god-ray shaft */}
                 <motion.div
-                  className="absolute left-[20%] top-[-20%] h-[150%] w-[55%]"
+                  className="absolute left-[5%] top-[-20%] h-[150%] w-[60%]"
                   style={{
-                    background: 'linear-gradient(100deg, transparent, rgba(255,244,214,0.16), transparent)',
-                    maskImage: 'radial-gradient(circle at 50% 50%, black 0%, transparent 72%)',
-                    WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 0%, transparent 72%)',
+                    background: 'linear-gradient(75deg, transparent, rgba(255,244,214,0.24), transparent)',
+                    maskImage: 'radial-gradient(circle at 45% 50%, black 0%, transparent 72%)',
+                    WebkitMaskImage: 'radial-gradient(circle at 45% 50%, black 0%, transparent 72%)',
                   }}
-                  initial={reduced ? false : { opacity: 0, rotate: -4 }}
-                  animate={{ opacity: reduced ? 0.4 : opened ? 0.45 : 0, rotate: reduced ? 6 : opened ? 8 : -4 }}
+                  initial={reduced ? false : { opacity: 0, rotate: -8 }}
+                  animate={{ opacity: reduced ? 0.5 : opened ? 0.6 : 0, rotate: reduced ? 4 : opened ? 6 : -8 }}
                   transition={reduced ? { duration: 0 } : { duration: 1.4, delay: 0.25 }}
                 />
               </div>
 
               {/* warm light-wedge across the sill */}
               <motion.div
-                className="absolute bottom-0 left-[18px] right-[18px] h-[60px] origin-bottom"
-                style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(255,228,176,0.5), transparent 70%)', filter: 'blur(6px)' }}
-                initial={reduced ? false : { opacity: 0, scaleX: 0.2 }}
-                animate={{ opacity: lit ? 0.8 : 0, scaleX: lit ? 1 : 0.2 }}
+                className="absolute bottom-0 left-[18px] right-[18px] h-[70px] origin-bottom-left"
+                style={{ background: 'radial-gradient(ellipse at 22% 100%, rgba(255,228,176,0.7), transparent 72%)', filter: 'blur(6px)' }}
+                initial={reduced ? false : { opacity: 0, scaleX: 0.15 }}
+                animate={{ opacity: lit ? 0.9 : 0, scaleX: lit ? 1 : 0.15 }}
                 transition={reduced ? { duration: 0 } : { duration: 1.2, delay: 0.3 }}
               />
 
