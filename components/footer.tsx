@@ -115,8 +115,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-[#14a84b] shrink-0" />
-                <a href="mailto:info@zypher-code.com" className="text-white/70 text-sm hover:text-[#14a84b] transition-colors">
-                  info@zypher-code.com
+                <a href="mailto:info@bvwindia.com" className="text-white/70 text-sm hover:text-[#14a84b] transition-colors">
+                  info@bvwindia.com
                 </a>
               </li>
               <li className="text-white/60 text-sm">Mon–Sat: 9:00 AM – 6:00 PM</li>

@@ -75,8 +75,8 @@ export default function ContactSection() {
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">Email</p>
-                <a href="mailto:info@zypher-code.com" className="text-muted-foreground text-sm hover:text-[#14a84b] transition-colors block">
-                  info@zypher-code.com
+                <a href="mailto:info@bvwindia.com" className="text-muted-foreground text-sm hover:text-[#14a84b] transition-colors block">
+                  info@bvwindia.com
                 </a>
                 <a href="mailto:sales@bvwindia.com" className="text-muted-foreground text-sm hover:text-[#14a84b] transition-colors block">
                   sales@bvwindia.com

@@ -97,9 +97,9 @@ export default function Navbar() {
               <Phone size={12} />
               9896115358
             </a>
-            <a href="mailto:info@zypher-code.com" className="flex items-center gap-1.5 transition-colors hover:text-[#14a84b]">
+            <a href="mailto:info@bvwindia.com" className="flex items-center gap-1.5 transition-colors hover:text-[#14a84b]">
               <Mail size={12} />
-              info@zypher-code.com
+              info@bvwindia.com
             </a>
           </div>
         </div>
@@ -250,9 +250,9 @@ export default function Navbar() {
                 <Phone size={14} />
                 9896115358
               </a>
-              <a href="mailto:info@zypher-code.com" className="flex items-center gap-2">
+              <a href="mailto:info@bvwindia.com" className="flex items-center gap-2">
                 <Mail size={14} />
-                info@zypher-code.com
+                info@bvwindia.com
               </a>
             </div>
           </motion.div>
